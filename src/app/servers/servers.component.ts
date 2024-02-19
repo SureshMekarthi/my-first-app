@@ -10,6 +10,7 @@ allowNewServer= false;
 serverCreationStatus='No server was created!'
 serverName='';
 serverCreated=false;
+servers =['testServer1', 'testServer2']
 
 constructor(){
   setTimeout(()=>
@@ -23,6 +24,7 @@ ngOnInit(): void {
 }
 onCreateServer(){
   this.serverCreated= true;
+  this.servers.push(this.serverName);
   this.serverCreationStatus='Server was created'+this.serverName
 }
 onUpdateServerName(event:Event){
